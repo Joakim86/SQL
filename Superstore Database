@@ -31,15 +31,15 @@ VALUES
 
 Select *
 from superstore
-order by price;
+order by price desc;
 
 select avg (price)
 from superstore;
 
-select sum (price)
+select category, sum (price)
 from superstore
 where category = "Kitchen Supplies";
 
-select sum (stock_quantity)
+select item_name, category, sum (stock_quantity)
 from superstore
 where item_name = "Air Purifier";
