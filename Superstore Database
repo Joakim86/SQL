@@ -33,13 +33,13 @@ Select *
 from superstore
 order by price desc;
 
-select avg (price)
+select round(avg (price),2) as "average price"
 from superstore;
 
-select category, sum (price)
+select category, round(sum (price),2) as "sum price"
 from superstore
 where category = "Kitchen Supplies";
 
-select item_name, category, sum (stock_quantity)
+select item_name, category, sum (stock_quantity) as "sum stock quantity"
 from superstore
 where item_name = "Air Purifier";
